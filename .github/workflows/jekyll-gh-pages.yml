@@ -37,11 +37,11 @@ jobs:
           cache: 'npm'
           cache-dependency-path: '**/package-lock.json'
       - name: Install dependencies
-        run:           
+        run: |          
           cd vite-project
           npm install
       - name: Build
-        run: 
+        run: |
           cd vite-project
           npm run build
       - name: Setup Pages
