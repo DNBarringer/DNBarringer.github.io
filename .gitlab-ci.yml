@@ -4,7 +4,7 @@ pages:
   cache:
     key:
       files:
-        - vite-project/package-lock.json
+        - ./vite-project/package-lock.json
       prefix: npm
     paths:
       - node_modules/
