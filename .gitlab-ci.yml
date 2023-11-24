@@ -9,6 +9,7 @@ pages:
     paths:
       - node_modules/
   script:
+    - cd vite-project
     - npm ci --prefer-offline
     - npm run build
     - cp -a dist/. public/
