@@ -37,7 +37,7 @@ jobs:
           cache: 'npm'
           cache-dependency-path: '**/package-lock.json'
       - name: Log
-        run: pwd
+        run: ls -al
       - name: Change directory
         run: cd vite-config
       - name: Install dependencies
