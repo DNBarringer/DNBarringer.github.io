@@ -36,8 +36,12 @@ jobs:
           node-version: 18
           cache: 'npm'
           cache-dependency-path: '**/package-lock.json'
+      - name: Log
+        run: pwd
+      - name: Change directory
+        run: cd vite-config
       - name: Install dependencies
-        run: cd vite-config; npm install
+        run: npm install
       - name: Build
         run: npm run build
       - name: Setup Pages
