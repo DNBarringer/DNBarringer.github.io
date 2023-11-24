@@ -9,7 +9,7 @@ pages:
     paths:
       - node_modules/
   script:
-    - npm install
+    - npm ci --prefer-offline
     - npm run build
     - cp -a dist/. public/
   artifacts:
