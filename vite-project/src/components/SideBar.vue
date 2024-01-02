@@ -7,7 +7,6 @@
 
         <VDivider/>
 
-
         <VList density="compact" nav>
             <VListItem prepend-icon="mdi-image" title="Gallery" value="colour"></VListItem>
         </VList>
