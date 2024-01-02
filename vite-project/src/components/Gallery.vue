@@ -34,19 +34,30 @@
     async mounted() {
       try {
         console.log("FETCHING");
-        const context = import.meta.glob('../assets/photos/sony/hot-air-balloon/*.(png|jpg|svg)');
+        const context = import.meta.glob('../assets/photos/sony/**/*.(png|jpg|svg)');
         const images = Object.values(context);
 
-        for (const imagePromise of images) {
-          const imagePath = await (imagePromise as () => Promise<ImagePathFunction>)();
-          this.photos.push(imagePath.default);
+        const photoOrder = [
+          'DSC01317.jpg',
+        ];
+
+        for (const orderedPhoto of photoOrder) {
+          for (const imagePromise of images) {
+            const imagePath = await (imagePromise as () => Promise<ImagePathFunction>)();
+            const filename = imagePath.default.split('/').pop() || ''; // Extract the filename from the path
+
+            if (filename === orderedPhoto) {
+              this.photos.push(imagePath.default);
+              break;
+            }
+          }
         }
       } catch (error) {
         console.error('Error fetching images:', error);
       } finally {
         console.log('Photos:', this.photos); // Log fetched photos for debugging
       }
-}
+    }
   });
   </script>
   
