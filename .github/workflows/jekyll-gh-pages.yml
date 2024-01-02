@@ -27,6 +27,9 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./vite-project
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -37,10 +40,8 @@ jobs:
           cache: 'npm'
           cache-dependency-path: '**/package-lock.json'
       - name: Install dependencies
-        working-directory: ./vite-project
         run: npm install
       - name: Build
-        working-directory: ./vite-project
         run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v3
@@ -51,4 +52,4 @@ jobs:
           path: vite-project/dist
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2.2.4
+        uses: actions/deploy-pages@v3
