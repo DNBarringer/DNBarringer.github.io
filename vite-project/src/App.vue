@@ -1,26 +1,13 @@
 <template>
-  <v-app>
-    <v-main>
-      <HelloWorld/>
-    </v-main>
-  </v-app>
+  <VApp>
+    <SideBar></SideBar>
+    <VMain>
+      <Gallery class="mx-5 my-2 pa-3"></Gallery>
+    </VMain>
+  </VApp>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
-
-export default defineComponent({
-  name: 'App',
-
-  components: {
-    HelloWorld,
-  },
-
-  data () {
-    return {
-      //
-    }
-  },
-})
+<script setup lang="ts" >
+  import SideBar from "./components/SideBar.vue";
+  import Gallery from "./components/Gallery.vue"
 </script>

@@ -37,20 +37,16 @@ jobs:
           cache: 'npm'
           cache-dependency-path: '**/package-lock.json'
       - name: Install dependencies
-        run: |          
-          cd vite-project
-          npm install
+        run: npm install
       - name: Build
-        run: |
-          cd vite-project
-          npm run build
+        run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload dist repository
-          path: './vite-project/dist'
+          path: './dist'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
