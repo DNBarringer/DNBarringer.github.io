@@ -1,6 +1,6 @@
 <template>
     <VRow>
-        <VCol v-for="(photo, index) in photos" :key="index" cols="12" sm="6" md="4" lg="3">
+        <!-- <VCol v-for="(photo, index) in photos" :key="index" cols="12" sm="6" md="4" lg="3">
             <VCard>
                 <VImg :src="photo" alt="Photo" aspect-ratio="1" cover>
                     <template v-slot:placeholder>
@@ -13,12 +13,11 @@
                 </template>
                 </VImg>
             </VCard>
-            <!-- <PhotoCard :image="imgUrl"></PhotoCard> -->
-        </VCol>
+        </VCol> -->
     </VRow>
   </template>
   
-  <script lang="ts">
+  <!-- <script lang="ts">
   import { defineComponent } from 'vue';
   
   interface ImagePathFunction {
@@ -60,4 +59,4 @@
     }
   });
   </script>
-  
+   -->

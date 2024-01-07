@@ -10,4 +10,7 @@ export default defineConfig({
 		vue(),
 		vuetify({ autoImport: true }),
 	],
+	build: {
+		outDir: './dist',
+	  },
 })

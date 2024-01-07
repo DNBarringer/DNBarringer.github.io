@@ -2,12 +2,11 @@
   <VApp>
     <SideBar></SideBar>
     <VMain>
-      <Gallery class="mx-5 my-2 pa-3"></Gallery>
+      <!-- <Gallery class="mx-5 my-2 pa-3"></Gallery> -->
     </VMain>
   </VApp>
 </template>
 
 <script setup lang="ts" >
   import SideBar from "./components/SideBar.vue";
-  import Gallery from "./components/Gallery.vue"
 </script>
